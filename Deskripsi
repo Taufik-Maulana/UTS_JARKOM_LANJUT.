@@ -1,0 +1,29 @@
+Gambar di atas merupakan sebuah topologi jaringan yang terdiri dari tiga router (R1 CR, R2 KHI, dan R3 KJ) yang saling terhubung dan beberapa perangkat komputer yang terhubung ke router tersebut melalui interface Ethernet (ETH).
+
+Berikut adalah deskripsi dari masing-masing elemen pada topologi:
+
+1. Router R1 CR :
+   - Memiliki beberapa interface:
+     - ETH 2 : Menghubungkan perangkat komputer pada IP subnet `192.168.3.0/24`, dengan IP `192.168.3.1`.
+     - ETH 3 : Menghubungkan router R2 KHI melalui jalur jaringan `10.10.10.0/30`, dengan IP `10.10.10.2`.
+     - ETH 4: Menghubungkan router R3 KJ melalui jalur jaringan `11.11.11.0/30`, dengan IP `11.11.11.2`.
+
+2. Router R2 KHI :
+   - Memiliki beberapa interface:
+     - ETH 2 : Menghubungkan perangkat komputer pada IP subnet `192.168.1.0/24`, dengan IP `192.168.1.1`.
+     - ETH 3 : Terhubung ke router R1 CR melalui jaringan `10.10.10.0/30`.
+     - ETH 4 : Terhubung ke router R3 KJ melalui jaringan `12.12.12.0/30`, dengan IP `12.12.12.2`.
+
+3. Router R3 KJ :
+   - Memiliki beberapa interface:
+     - ETH 2 : Menghubungkan perangkat komputer pada IP subnet `192.168.2.0/24`, dengan IP `192.168.2.1`.
+     - ETH 3 : Terhubung ke router R2 KHI melalui jaringan `12.12.12.0/30`.
+     - ETH 4 : Terhubung ke router R1 CR melalui jaringan `11.11.11.0/30`, dengan IP `10.10.10.1`.
+
+4. Perangkat Komputer :
+   - Setiap router memiliki perangkat komputer yang terhubung pada subnet yang berbeda-beda:
+     - Komputer di Router R1 CR terhubung ke jaringan `192.168.3.0/24`.
+     - Komputer di Router R2 KHI terhubung ke jaringan `192.168.1.0/24`.
+     - Komputer di Router R3 KJ terhubung ke jaringan `192.168.2.0/24`.
+
+Topologi ini memperlihatkan bagaimana jaringan-jaringan berbeda dapat terhubung melalui tiga router menggunakan berbagai subnet dan interface Ethernet yang ada di setiap router.
